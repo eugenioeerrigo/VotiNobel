@@ -42,6 +42,8 @@ public class EsameDAO {
 	public boolean inserisciEsame(Esame esame) {
 
 		String sql = "INSERT IGNORE INTO `esamitriennale`.`esami` (`codins`, `nomecorso`, `voto`, `crediti`) VALUES(?,?,?,?)";
+		//IGNORE: evita problemi se ho già quell'esame nel db
+		
 		boolean returnValue = false;
 		
 		try {
